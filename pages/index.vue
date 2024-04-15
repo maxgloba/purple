@@ -15,20 +15,18 @@
       <div class="line line-short"></div>
     </div>
     <div ref="wrapperTop" class="wrapper wrapper-top"
-         @mousewheel="scrollDown"
-         @wheel="scrollDown"
-         @scroll="scrollDown"
-         @touchstart="touchStart"
-         @touchmove="touchMove"
-    >
+      @mousewheel="scrollDown"
+      @wheel="scrollDown"
+      @scroll="scrollDown"
+      @touchstart="touchStart"
+      @touchmove="touchMove">
     <HomeBanner />
     </div>
 
     <div ref="wrapperBottom" class="wrapper wrapper-bottom"
-         @mousewheel="scrollTop"
-         @wheel="scrollTop"
-         @scroll="scrollTop"
-    >
+      @mousewheel="scrollTop"
+      @wheel="scrollTop"
+      @scroll="scrollTop">
 
       <div class="background background-light" ref="bg">
         <div class="bg-wrap">
@@ -66,7 +64,7 @@
 
 <script>
 export default {
-  layout: 'default',
+  layout: 'home',
   data() {
     return {
       lines: true,
@@ -203,7 +201,7 @@ export default {
     },
     clearNavigation() {
       const paginations = document.querySelectorAll('.pagination-list li'),
-          nav = document.querySelectorAll('.nav-list li')
+            nav = document.querySelectorAll('.nav-list li')
 
       paginations.forEach(item => item.classList.remove('active'))
       nav.forEach(item => item.classList.remove('active'))
